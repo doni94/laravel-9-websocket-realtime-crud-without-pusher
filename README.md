@@ -1,3 +1,10 @@
+-   Tech
+
+1. Laravel 9
+2. websocket beyondco.de
+3. laravel echo
+4. jquery ajax
+
 -   Installation and usage
 
 1. php artisan config:cache
