@@ -90,14 +90,14 @@
          //   document.getElementById('latest_trade_user').innerText = e.message;
         //})
    //alert($('#queryTable tbody tr:first td:first').text());     
-   var counter = parseInt($('#queryTable tbody tr:first td:first').text()) + 1;     
+   var counter = parseInt($('#queryTable tbody tr:last td:first').text()) + 1;     
    Echo.channel('testevents')
     .listen('NewTrade', (e) => {
 
         var message = e.message;
         var messages = message.split(',');
         
-        $('#queryTable tbody').prepend('<tr> <td>'+ counter +'</td> <td>'+ messages[0] +'</td> <td>'+ messages[1] +'</td> </tr>');
+        $('#queryTable tbody').append('<tr> <td>'+ counter +'</td> <td>'+ messages[0] +'</td> <td>'+ messages[1] +'</td> </tr>');
         counter += 1;
     })
 
